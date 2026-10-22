@@ -135,7 +135,7 @@
 <section class="contact" id="contact"><div class="wrap"><div class="eyebrow">Begin vandaag</div><h2>Klaar om aan jouw doelen te werken?</h2><p>Vraag vrijblijvend een kennismaking aan of geef aan in welke training je geïnteresseerd bent. Je ontvangt daarna persoonlijk bericht om een geschikt moment af te spreken.</p><div class="form-layout"><div><h3>Persoonlijke begeleiding begint hier</h3><p>Vertel waar je aan wilt werken. Of je nu wilt afvallen, sterker wilt worden of wilt deelnemen aan 10 Weeks Strong: we kijken samen wat past.</p><div class="panel" style="padding:25px"><strong style="color:var(--gold)">Goed om te weten</strong><p>Dit is een aanvraag, geen directe bevestiging van een training. Voor het trainen bij Zuiver is een apart lidmaatschap vereist.</p></div></div><form name="kennismaking" method="POST" action="/bedankt.html" data-netlify="true" netlify-honeypot="bot-field" class="lead-form"><input type="hidden" name="form-name" value="kennismaking"><p class="hidden-field"><label>Laat dit veld leeg <input name="bot-field" autocomplete="off"></label></p><label for="naam">Naam *</label><input id="naam" name="naam" type="text" autocomplete="name" required maxlength="120"><label for="email">E-mailadres *</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200"><label for="telefoon">Telefoonnummer (optioneel)</label><input id="telefoon" name="telefoon" type="tel" autocomplete="tel" maxlength="40"><label for="interesse">Waar heb je interesse in? *</label><select id="interesse" name="interesse" required><option value="">Maak een keuze</option><option>Gratis kennismaking</option><option>Losse personal training</option><option>5-rittenkaart personal training</option><option>10-rittenkaart personal training</option><option>10 Weeks Strong</option></select><label for="doel">Wat is jouw trainingsdoel?</label><textarea id="doel" name="trainingsdoel" rows="4" maxlength="1200" placeholder="Bijvoorbeeld: sterker worden, afvallen of fitter worden"></textarea><label class="consent"><input type="checkbox" name="privacy-akkoord" value="ja" required><span>Ik geef toestemming om mijn gegevens te gebruiken om op mijn aanvraag te reageren. *</span></label><button type="submit" class="btn primary submit-btn">Verstuur mijn aanvraag →</button><p class="note">Je gegevens worden uitsluitend gebruikt om je aanvraag te behandelen. Deel geen medische of andere gevoelige informatie via dit formulier.</p></form></div></div></section>
 </main><footer><div class="wrap footer-inner"><span>© <span id="year"></span> Share Performance</span><span>Personal Training · Amsterdam & Amstelveen</span></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body></html>
+
 <style>
 /* Scroll-animaties */
 .reveal {
@@ -206,4 +206,5 @@ document.addEventListener("DOMContentLoaded", function () {
   elements.forEach(el => observer.observe(el));
 });
 </script>
-
+</body>
+</html>

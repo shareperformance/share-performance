@@ -350,7 +350,97 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 </script>
 
+<style>
+  .sp-wa-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 62px;
+    height: 62px;
+    border: none;
+    border-radius: 50%;
+    background: #25D366;
+    color: white;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 8px 28px rgba(0,0,0,.35);
+    transition: transform .25s ease;
+    animation: spWaPop .6s ease both;
+  }
+  .sp-wa-button:hover { transform: scale(1.1); }
+  .sp-wa-button svg { width: 33px; height: 33px; fill: currentColor; }
+  @keyframes spWaPop {
+    from { opacity: 0; transform: scale(.5); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .sp-wa-chat {
+    position: fixed;
+    right: 24px;
+    bottom: 100px;
+    width: min(340px, calc(100vw - 32px));
+    padding: 22px;
+    background: #171717;
+    color: #fff;
+    border: 1px solid #c8a66a;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.5);
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+  }
+  .sp-wa-chat[hidden] { display: none; }
+  .sp-wa-chat h3 { margin: 0 0 12px; color: #c8a66a; font-size: 19px; }
+  .sp-wa-chat p { margin: 0 0 18px; line-height: 1.6; font-size: 14px; }
+  .sp-wa-link {
+    display: block;
+    padding: 13px;
+    border-radius: 9px;
+    background: #25D366;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .sp-wa-link:hover { background: #1eaf54; }
+  @media (max-width: 480px) {
+    .sp-wa-button { right: 16px; bottom: 16px; }
+    .sp-wa-chat { right: 16px; bottom: 90px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sp-wa-button { animation: none; transition: none; }
+  }
+</style>
+
+<div class="sp-wa-chat" id="sp-wa-chat" hidden>
+  <h3>Chat met Share Performance</h3>
+  <p>Hoi! 👋 Heb je vragen over personal training of 10 Weeks Strong? Stuur me gerust een berichtje!</p>
+  <a class="sp-wa-link"
+     href="https://wa.me/31630717503?text=Hoi%21%20Ik%20heb%20je%20website%20bekeken%20en%20wil%20graag%20meer%20informatie."
+     target="_blank"
+     rel="noopener noreferrer">
+    Start WhatsApp-chat →
+  </a>
+</div>
+
+<button class="sp-wa-button" id="sp-wa-button"
+        type="button" aria-label="Open WhatsApp-chat"
+        aria-expanded="false" aria-controls="sp-wa-chat">
+  <svg viewBox="0 0 32 32" aria-hidden="true">
+    <path d="M16 .8A15.1 15.1 0 0 0 3 23.5L.9 31l7.7-2A15.2 15.2 0 1 0 16 .8zm0 27.6a12.4 12.4 0 0 1-6.3-1.7l-.5-.3-4.5 1.2 1.2-4.4-.3-.5A12.5 12.5 0 1 1 16 28.4zm6.9-9.4c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1a10.2 10.2 0 0 1-5-4.4c-.4-.7.4-.7 1.1-2.1.1-.2 0-.5 0-.7l-1.2-2.9c-.3-.7-.6-.6-.8-.6h-.7c-.3 0-.7.1-1 .5s-1.3 1.3-1.3 3.1 1.3 3.7 1.5 3.5 3.4 5.1c2.3 2 4.5 2.7 6 3.1 1.5.4 2.9.3 4-.2 1.2-.6 2.1-1.9 2.4-2.6.2-.7.2-1.3.1-1.4z"/>
+  </svg>
+</button>
+
+<script>
+  const spWaButton = document.getElementById('sp-wa-button');
+  const spWaChat = document.getElementById('sp-wa-chat');
+
+  spWaButton.addEventListener('click', () => {
+    spWaChat.hidden = !spWaChat.hidden;
+    spWaButton.setAttribute('aria-expanded', String(!spWaChat.hidden));
+  });
+</script>
+
 </body>
 </html>
-</body>
-</html>
+

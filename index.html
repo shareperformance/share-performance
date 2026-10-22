@@ -39,3 +39,74 @@
 </main><footer><div class="wrap footer-inner"><span>© <span id="year"></span> Share Performance</span><span>Personal Training · Amsterdam & Amstelveen</span></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body></html>
+<style>
+/* Scroll-animaties */
+.reveal {
+  opacity: 0;
+  transform: translateY(45px) scale(.97);
+  transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Foto's */
+.reveal img {
+  transition: transform .7s ease;
+}
+.reveal img:hover {
+  transform: scale(1.035);
+}
+
+/* Knoppen */
+a.btn, button, .btn {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+a.btn:hover, button:hover, .btn:hover {
+  transform: translateY(-4px) scale(1.035);
+  box-shadow: 0 10px 28px rgba(200,166,106,.22);
+}
+
+/* Respecteer bewegingsvoorkeuren */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(
+    "main section .wrap > *, main section .section-head, main section figure"
+  );
+
+  elements.forEach(function (element, index) {
+    element.classList.add("reveal");
+    element.style.transitionDelay = (index % 3) * 100 + "ms";
+  });
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    elements.forEach(el => el.classList.add("visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, {
+    threshold: 0.08
+  });
+
+  elements.forEach(el => observer.observe(el));
+});
+</script>
+

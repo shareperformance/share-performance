@@ -26,6 +26,64 @@
 @media(max-width:760px){.brand-lockup img{width:60px;height:42px}.brand-lockup .brand-name strong{font-size:1rem}.brand-lockup .brand-name small{font-size:.56rem}}
 </style>
 </head>
+<style>
+/* Mooie indeling tarieven */
+#tarieven .cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 36px;
+}
+
+#tarieven .card {
+  min-width: 0;
+  padding: 34px;
+  border: 1px solid rgba(200,166,106,.22);
+  border-radius: 16px;
+  background: #1c1c1c;
+  transition: border-color .35s ease,
+              box-shadow .35s ease,
+              transform .35s ease;
+}
+
+#tarieven .card:hover {
+  border-color: #c8a66a;
+  box-shadow: 0 12px 35px rgba(200,166,106,.12);
+  transform: translateY(-5px);
+}
+
+/* 10 Weeks Strong over de volle breedte */
+#tarieven .card:nth-child(3) {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, #242018, #1c1c1c);
+}
+
+#tarieven .card .btn {
+  margin-top: 12px;
+}
+
+/* Mobiel */
+@media (max-width: 760px) {
+  #tarieven .cards {
+    grid-template-columns: 1fr;
+  }
+
+  #tarieven .card:nth-child(3) {
+    grid-column: auto;
+  }
+
+  #tarieven .card {
+    padding: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #tarieven .card {
+    transition: none;
+  }
+}
+</style>
+
 <body>
 <header><div class="wrap nav"><a class="logo brand-lockup" href="#home" aria-label="Share Performance - naar begin"><img src="images/share-logo.png" alt="" width="82" height="48"><span class="brand-name"><strong>SHARE</strong><small>PERFORMANCE</small></span></a><nav aria-label="Hoofdnavigatie"><a href="#diensten">Diensten</a><a href="#programma">10 Weeks Strong</a><a href="#locatie">Locatie</a><a href="#tarieven">Tarieven</a><a href="#contact">Contact</a></nav></div></header>
 <main>

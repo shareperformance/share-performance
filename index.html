@@ -25,6 +25,95 @@
 .brand-lockup .brand-name small{font-size:.67rem;font-weight:800;letter-spacing:.25em;color:#d4af67}
 @media(max-width:760px){.brand-lockup img{width:60px;height:42px}.brand-lockup .brand-name strong{font-size:1rem}.brand-lockup .brand-name small{font-size:.56rem}}
 </style>
+ 
+<style>
+.earth-showcase {
+  max-width: 1050px;
+  margin: 55px auto;
+  text-align: center;
+}
+
+.earth-showcase-heading {
+  margin-bottom: 28px;
+}
+
+.earth-label {
+  display: inline-block;
+  color: #c8a66a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.earth-showcase-heading h3 {
+  color: #f6f3ed;
+  font-size: clamp(25px, 4vw, 38px);
+  margin: 0 0 12px;
+}
+
+.earth-showcase-heading p {
+  color: #b9b7b3;
+  font-size: 16px;
+}
+
+.earth-video-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid rgba(200,166,106,.55);
+  background: #080808;
+  box-shadow: 0 20px 65px rgba(0,0,0,.5),
+              0 0 35px rgba(200,166,106,.09);
+}
+
+.earth-video-frame video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.earth-location-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  padding: 12px 17px;
+  border: 1px solid rgba(200,166,106,.35);
+  border-radius: 10px;
+  background: rgba(10,10,10,.82);
+  color: #f6f3ed;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  backdrop-filter: blur(12px);
+}
+
+.earth-location-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #c8a66a;
+  box-shadow: 0 0 12px #c8a66a;
+}
+
+@media (max-width: 600px) {
+  .earth-showcase {
+    margin: 35px auto;
+  }
+
+  .earth-location-label {
+    bottom: 10px;
+    left: 10px;
+    padding: 9px 11px;
+    font-size: 9px;
+    letter-spacing: .5px;
+  }
+}
+</style>
+
 </head>
 <style>
 /* Mooie indeling tarieven */

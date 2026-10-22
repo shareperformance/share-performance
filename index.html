@@ -205,6 +205,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   elements.forEach(el => observer.observe(el));
 });
+</script></script>
+
+<script>
+  const earthVideo = document.getElementById('zuiver-earth-video');
+
+  if (earthVideo) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          earthVideo.currentTime = 0;
+          earthVideo.play().catch(() => {});
+        } else {
+          earthVideo.pause();
+        }
+      });
+    }, { threshold: 0.4 });
+
+    observer.observe(earthVideo);
+  }
 </script>
+
+</body>
+</html>
 </body>
 </html>

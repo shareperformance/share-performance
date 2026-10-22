@@ -369,7 +369,22 @@ document.addEventListener("DOMContentLoaded", function () {
     transition: transform .25s ease;
     animation: spWaPop .6s ease both;
   }
-  .sp-wa-button:hover { transform: scale(1.1); }
+  
+.sp-wa-button:hover {
+  transform: scale(1.12) rotate(8deg);
+  box-shadow: 0 10px 35px rgba(37, 211, 102, 0.45);
+}
+
+.sp-wa-button:hover img {
+  animation: whatsappWiggle 0.5s ease-in-out;
+}
+
+@keyframes whatsappWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-15deg); }
+  75% { transform: rotate(15deg); }
+}
+
   .sp-wa-button svg { width: 33px; height: 33px; fill: currentColor; }
   @keyframes spWaPop {
     from { opacity: 0; transform: scale(.5); }

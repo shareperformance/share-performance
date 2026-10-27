@@ -1,9 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="nl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>Personal Trainer Amsterdam &amp; Amstelveen | Share Performance</title>
-<meta name="description" content="Personal training bij Share Performance in Amsterdam en Amstelveen. Werk aan kracht, spiermassa en fitheid met persoonlijke begeleiding. Plan een kennismaking.">
+<meta content="Personal training bij Share Performance in Amsterdam en Amstelveen. Werk aan kracht, spiermassa en fitheid met persoonlijke begeleiding. Plan een kennismaking." name="description"/>
 <style>
 :root{--gold:#c8a66a;--bg:#101010;--surface:#1c1c1c;--white:#f6f3ed;--muted:#b9b7b1}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,90%);margin:auto}header{border-bottom:1px solid #333;background:#101010ee;position:sticky;top:0;z-index:10}.nav{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:76px}.logo{font-weight:900;letter-spacing:.1em;font-size:1.2rem}.logo span{color:var(--gold)}nav{display:flex;gap:22px;font-size:.9rem}nav a:hover{color:var(--gold)}.hero{padding:115px 0 125px;background:radial-gradient(circle at 85% 45%,#393024 0%,transparent 45%),linear-gradient(120deg,#171717,#090909)}.eyebrow{text-transform:uppercase;letter-spacing:.22em;color:var(--gold);font-size:.78rem;font-weight:700}h1{font-size:clamp(3rem,7vw,6rem);line-height:1.04;max-width:850px;margin:20px 0 24px;letter-spacing:-.05em}h1 em{font-style:normal;color:var(--gold)}.intro{font-size:1.2rem;max-width:610px;color:var(--muted)}.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}.btn{display:inline-block;padding:14px 24px;border:1px solid var(--gold);font-weight:700;border-radius:3px}.btn.primary{background:var(--gold);color:#121212}.btn:hover{filter:brightness(1.13)}section{padding:90px 0}.section-head{max-width:690px;margin-bottom:35px}h2{font-size:clamp(2rem,4vw,3rem);line-height:1.15;margin:12px 0 20px}p{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:30px;background:var(--surface);border:1px solid #303030;border-radius:6px}.card h3{margin:0 0 12px}.num{color:var(--gold);font-weight:800;font-size:.9rem}.alt{background:#171717}.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.panel{padding:45px;border:1px solid #50422f;background:linear-gradient(145deg,#252017,#151515)}.price{font-size:2.4rem;font-weight:800;color:var(--white);margin:0}.price small{font-size:.95rem;color:var(--muted);font-weight:400}.note{font-size:.9rem}.contact{background:linear-gradient(120deg,#1e1a14,#111)}footer{border-top:1px solid #333;padding:25px 0;color:var(--muted);font-size:.85rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}@media(max-width:760px){nav{gap:12px;flex-wrap:wrap;font-size:.8rem}.nav{padding:12px 0;align-items:flex-start;flex-direction:column}.hero{padding:75px 0}.grid,.split{grid-template-columns:1fr}section{padding:65px 0}.panel{padding:28px}}
 
@@ -25,7 +26,6 @@
 .brand-lockup .brand-name small{font-size:.67rem;font-weight:800;letter-spacing:.25em;color:#d4af67}
 @media(max-width:760px){.brand-lockup img{width:60px;height:42px}.brand-lockup .brand-name strong{font-size:1rem}.brand-lockup .brand-name small{font-size:.56rem}}
 </style>
- 
 <style>
 .earth-showcase {
   max-width: 650px;
@@ -124,8 +124,13 @@
   }
 }
 </style>
-
-</head>
+<style>
+.language-switch{display:flex;gap:5px;align-items:center;margin-left:auto;flex-shrink:0;padding:4px;border:1px solid #5c4b2e;border-radius:8px;background:#1c1c1c}
+.language-button{appearance:none;border:0;border-radius:5px;background:transparent;color:#f6f3ed;font:700 .8rem Arial,sans-serif;padding:9px 10px;cursor:pointer;white-space:nowrap}
+.language-button[aria-pressed="true"]{background:#c8a66a;color:#101010}
+.language-button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+@media(max-width:760px){.nav{flex-direction:row;align-items:center;flex-wrap:wrap}.nav nav{order:3;width:100%;justify-content:flex-start}.language-switch{margin-left:auto}.language-button{padding:8px}}
+</style></head>
 <style>
 /* Mooie indeling tarieven */
 #tarieven .cards {
@@ -183,83 +188,63 @@
   }
 }
 </style>
-
 <body>
-<header><div class="wrap nav"><a class="logo brand-lockup" href="#home" aria-label="Share Performance - naar begin"><img src="images/share-logo.png" alt="" width="82" height="48"><span class="brand-name"><strong>SHARE</strong><small>PERFORMANCE</small></span></a><nav aria-label="Hoofdnavigatie"><a href="#diensten">Diensten</a><a href="#programma">10 Weeks Strong</a><a href="#locatie">Locatie</a><a href="#tarieven">Tarieven</a><a href="#contact">Contact</a></nav></div></header>
+<header><div class="wrap nav"><a aria-label="Share Performance - naar begin" class="logo brand-lockup" href="#home"><img alt="" height="48" src="images/share-logo.png" width="82"/><span class="brand-name"><strong>SHARE</strong><small>PERFORMANCE</small></span></a><nav aria-label="Hoofdnavigatie"><a data-i18n="0" href="#diensten">Diensten</a><a href="#programma">10 Weeks Strong</a><a data-i18n="1" href="#locatie">Locatie</a><a data-i18n="2" href="#tarieven">Tarieven</a><a href="#contact">Contact</a></nav><div aria-label="Choose website language" class="language-switch" role="group"><button aria-pressed="true" class="language-button" data-language="nl" lang="nl" type="button">🇳🇱 NL</button><button aria-pressed="false" class="language-button" data-language="en" lang="en" type="button">🇬🇧 EN</button></div></div></header>
 <main>
-<section class="hero" id="home"><div class="wrap"><div class="eyebrow">Personal Training · Amsterdam & Amstelveen</div><h1>Personal Trainer Amsterdam &amp; Amstelveen</h1><p class="intro">Wil je afvallen, spiermassa opbouwen of sterker worden? Met persoonlijke coaching en een plan dat bij jou past, werken we doelgericht aan jouw resultaat.</p><div class="actions"><a class="btn primary" href="#contact">Plan een kennismaking →</a><a class="btn" href="#diensten">Ontdek de trainingen</a></div></div></section>
-<section id="diensten"><div class="wrap"><div class="section-head"><div class="eyebrow">Wat ik aanbied</div><h2>Training die bij jouw doelen past</h2><p>Geen standaard aanpak, maar begeleiding op jouw niveau en afgestemd op jouw wensen.</p></div><div class="grid"><article class="card visual-card"><img src="images/personal-training.webp" alt="Personal trainer begeleidt een klant tijdens krachttraining" loading="lazy"><div class="card-body"><div class="num">01</div><h3>Afvallen & fitter worden</h3><p>Werk aan een fitter en energieker lichaam met een haalbare aanpak voor training en leefstijl.</p></div></article><article class="card"><div class="num">02</div><h3>Spiermassa & kracht</h3><p>Bouw sterker op met gerichte krachttraining, techniek en een duidelijk trainingsplan.</p></article><article class="card"><div class="num">03</div><h3>Personal Training</h3><p>Persoonlijke aandacht, coaching en trainingen die passen bij jouw niveau en agenda.</p></article></div></div></section>
-<section class="alt" id="programma"><div class="wrap split"><div><div class="eyebrow">Train samen, word sterker</div><h2>10 Weeks Strong</h2><p>Tien weken samen werken aan kracht, conditie en een gezonde leefstijl. Met twee begeleide trainingen per week, afwisselende trainingsvormen en aandacht voor voeding en progressie.</p><a class="btn primary" href="#contact">Vraag naar de volgende ronde →</a></div><div><div class="team-images"><img src="images/team.webp" alt="Trainers van Share Performance" loading="lazy"><img src="images/team-training.webp" alt="Trainers met krachttrainingsmateriaal" loading="lazy"></div><div class="panel" style="margin-top:12px;padding:24px"><div class="eyebrow">Het programma</div><h3>10 weken. 20 trainingen.</h3><p>✔ 2 trainingen per week<br>✔ Kracht, conditie en boksen<br>✔ Voedingsbegeleiding en metingen</p><p class="note">Startdata op aanvraag.</p></div></div></div></section>
-<section id="over"><div class="wrap split"><div><div class="tag">Jouw coach</div><div class="eyebrow">Over Share Performance</div><h2>Maak kennis met Sherif</h2><p>Ik ben Sherif, personal trainer bij Share Performance. Met persoonlijke begeleiding, aandacht voor techniek en een aanpak die past bij jouw niveau help ik je sterker, fitter en zelfverzekerder te worden.</p><p>De trainingen vinden plaats bij de fitnessfaciliteiten van Hotel & Wellness Zuiver, bij het Amsterdamse Bos.</p></div><div><div class="about-photo"><img src="images/sherif-portret.webp" alt="Sherif, personal trainer bij Share Performance" loading="lazy"></div><div class="secondary-photo"><img src="images/zuiver-portret.webp" alt="Sherif bij Zuiver" loading="lazy"></div><p class="photo-caption">Training bij Zuiver, nabij het Amsterdamse Bos. Een apart lidmaatschap van Zuiver is vereist.</p></div></div></section>
-<section class="alt" id="locatie"><div class="wrap"><div class="section-head location-lead"><div class="eyebrow">Een bijzondere trainingsomgeving</div><h2>Train bij Spa Sport Hotel Zuiver</h2><p>Bij Share Performance train je in de luxe omgeving van Spa Sport Hotel Zuiver, vlak bij het Amsterdamse Bos. Fitness Zuiver biedt uitgebreide mogelijkheden voor krachttraining, cardio en groepslessen. Het hotel- en wellnesscomplex biedt daarnaast volop ruimte om te ontspannen en te herstellen.</p></div><div class="location-stats" aria-label="Faciliteiten van Zuiver"><div class="location-stat"><strong>1.000+ m²</strong><span>Fitness &amp; groepslessen</span><small>Ruimte om gericht aan je doelen te werken</small></div><div class="location-stat"><strong>13.000+ m²</strong><span>Hotel-, spa- &amp; wellnesscomplex</span><small>Training en ontspanning op één locatie</small></div></div><div class="location-gallery"><figure><img src="images/zuiver-fitness.webp" alt="Fitnessruimte bij Spa Sport Hotel Zuiver" loading="lazy"><figcaption>De fitnessruimte</figcaption></figure><figure><img src="images/zuiver-entree.webp" alt="Entree Spa Sport Hotel Zuiver" loading="lazy"><figcaption>De locatie</figcaption></figure><figure><img src="images/zuiver-wellness-buiten.webp" alt="Buitenbad en wellness bij Zuiver" loading="lazy"><figcaption>Wellness & ontspanning</figcaption></figure><figure><img src="images/zuiver-wellness-avond.webp" alt="Wellnessbad bij Zuiver in de avond" loading="lazy"><figcaption>Een luxe omgeving</figcaption></figure></div><p class="location-footnote">Voor personal training is een apart lidmaatschap bij Zuiver nodig. Toegang tot de wellness is afhankelijk van het gekozen lidmaatschap of de geldende toegangsvoorwaarden. Share Performance biedt de trainingen aan; de wellnessfaciliteiten behoren tot Zuiver.</p><div class="actions"><a class="btn primary" href="#contact">Vraag een kennismaking aan →</a></div></div></section>
- 
-
+<section class="hero" id="home"><div class="wrap"><div class="eyebrow">Personal Training · Amsterdam &amp; Amstelveen</div><h1>Personal Trainer Amsterdam &amp; Amstelveen</h1><p class="intro" data-i18n="3">Wil je afvallen, spiermassa opbouwen of sterker worden? Met persoonlijke coaching en een plan dat bij jou past, werken we doelgericht aan jouw resultaat.</p><div class="actions"><a class="btn primary" data-i18n="4" href="#contact">Plan een kennismaking →</a><a class="btn" data-i18n="5" href="#diensten">Ontdek de trainingen</a></div></div></section>
+<section id="diensten"><div class="wrap"><div class="section-head"><div class="eyebrow" data-i18n="6">Wat ik aanbied</div><h2 data-i18n="7">Training die bij jouw doelen past</h2><p data-i18n="8">Geen standaard aanpak, maar begeleiding op jouw niveau en afgestemd op jouw wensen.</p></div><div class="grid"><article class="card visual-card"><img alt="Personal trainer begeleidt een klant tijdens krachttraining" data-alt-en="Personal trainer coaching a client during strength training" loading="lazy" src="images/personal-training.webp"/><div class="card-body"><div class="num">01</div><h3 data-i18n="9">Afvallen &amp; fitter worden</h3><p data-i18n="10">Werk aan een fitter en energieker lichaam met een haalbare aanpak voor training en leefstijl.</p></div></article><article class="card"><div class="num">02</div><h3 data-i18n="11">Spiermassa &amp; kracht</h3><p data-i18n="12">Bouw sterker op met gerichte krachttraining, techniek en een duidelijk trainingsplan.</p></article><article class="card"><div class="num">03</div><h3>Personal Training</h3><p data-i18n="13">Persoonlijke aandacht, coaching en trainingen die passen bij jouw niveau en agenda.</p></article></div></div></section>
+<section class="alt" id="programma"><div class="wrap split"><div><div class="eyebrow" data-i18n="14">Train samen, word sterker</div><h2>10 Weeks Strong</h2><p data-i18n="15">Tien weken samen werken aan kracht, conditie en een gezonde leefstijl. Met twee begeleide trainingen per week, afwisselende trainingsvormen en aandacht voor voeding en progressie.</p><a class="btn primary" data-i18n="16" href="#contact">Vraag naar de volgende ronde →</a></div><div><div class="team-images"><img alt="Trainers van Share Performance" data-alt-en="Share Performance trainers" loading="lazy" src="images/team.webp"/><img alt="Trainers met krachttrainingsmateriaal" data-alt-en="Trainers with strength training equipment" loading="lazy" src="images/team-training.webp"/></div><div class="panel" style="margin-top:12px;padding:24px"><div class="eyebrow" data-i18n="17">Het programma</div><h3 data-i18n="18">10 weken. 20 trainingen.</h3><p data-i18n="79">✔ 2 trainingen per week<br/>✔ Kracht, conditie en boksen<br/>✔ Voedingsbegeleiding en metingen</p><p class="note" data-i18n="19">Startdata op aanvraag.</p></div></div></div></section>
+<section id="over"><div class="wrap split"><div><div class="tag" data-i18n="20">Jouw coach</div><div class="eyebrow" data-i18n="21">Over Share Performance</div><h2 data-i18n="22">Maak kennis met Sherif</h2><p data-i18n="23">Ik ben Sherif, personal trainer bij Share Performance. Met persoonlijke begeleiding, aandacht voor techniek en een aanpak die past bij jouw niveau help ik je sterker, fitter en zelfverzekerder te worden.</p><p data-i18n="24">De trainingen vinden plaats bij de fitnessfaciliteiten van Hotel &amp; Wellness Zuiver, bij het Amsterdamse Bos.</p></div><div><div class="about-photo"><img alt="Sherif, personal trainer bij Share Performance" data-alt-en="Sherif, personal trainer at Share Performance" loading="lazy" src="images/sherif-portret.webp"/></div><div class="secondary-photo"><img alt="Sherif bij Zuiver" data-alt-en="Sherif at Zuiver" loading="lazy" src="images/zuiver-portret.webp"/></div><p class="photo-caption" data-i18n="25">Training bij Zuiver, nabij het Amsterdamse Bos. Een apart lidmaatschap van Zuiver is vereist.</p></div></div></section>
+<section class="alt" id="locatie"><div class="wrap"><div class="section-head location-lead"><div class="eyebrow" data-i18n="26">Een bijzondere trainingsomgeving</div><h2 data-i18n="27">Train bij Spa Sport Hotel Zuiver</h2><p data-i18n="28">Bij Share Performance train je in de luxe omgeving van Spa Sport Hotel Zuiver, vlak bij het Amsterdamse Bos. Fitness Zuiver biedt uitgebreide mogelijkheden voor krachttraining, cardio en groepslessen. Het hotel- en wellnesscomplex biedt daarnaast volop ruimte om te ontspannen en te herstellen.</p></div><div aria-label="Faciliteiten van Zuiver" class="location-stats"><div class="location-stat"><strong>1.000+ m²</strong><span data-i18n="29">Fitness &amp; groepslessen</span><small data-i18n="30">Ruimte om gericht aan je doelen te werken</small></div><div class="location-stat"><strong>13.000+ m²</strong><span data-i18n="31">Hotel-, spa- &amp; wellnesscomplex</span><small data-i18n="32">Training en ontspanning op één locatie</small></div></div><div class="location-gallery"><figure><img alt="Fitnessruimte bij Spa Sport Hotel Zuiver" data-alt-en="Gym at Spa Sport Hotel Zuiver" loading="lazy" src="images/zuiver-fitness.webp"/><figcaption data-i18n="33">De fitnessruimte</figcaption></figure><figure><img alt="Entree Spa Sport Hotel Zuiver" data-alt-en="Entrance to Spa Sport Hotel Zuiver" loading="lazy" src="images/zuiver-entree.webp"/><figcaption data-i18n="34">De locatie</figcaption></figure><figure><img alt="Buitenbad en wellness bij Zuiver" data-alt-en="Outdoor pool and wellness at Zuiver" loading="lazy" src="images/zuiver-wellness-buiten.webp"/><figcaption data-i18n="35">Wellness &amp; ontspanning</figcaption></figure><figure><img alt="Wellnessbad bij Zuiver in de avond" data-alt-en="Wellness pool at Zuiver in the evening" loading="lazy" src="images/zuiver-wellness-avond.webp"/><figcaption data-i18n="36">Een luxe omgeving</figcaption></figure></div><p class="location-footnote" data-i18n="37">Voor personal training is een apart lidmaatschap bij Zuiver nodig. Toegang tot de wellness is afhankelijk van het gekozen lidmaatschap of de geldende toegangsvoorwaarden. Share Performance biedt de trainingen aan; de wellnessfaciliteiten behoren tot Zuiver.</p><div class="actions"><a class="btn primary" data-i18n="38" href="#contact">Vraag een kennismaking aan →</a></div></div></section>
 <div class="earth-showcase">
-  <div class="earth-showcase-heading">
-    <span class="earth-label">ONTDEK ONZE TRAININGSLOCATIE</span>
-    <h3>Train op een bijzondere locatie</h3>
-    <p>Bij Spa Sport Hotel Zuiver, direct aan het Amsterdamse Bos.</p>
-  </div>
-
-  <div class="earth-video-frame">
-   <a href="https://www.google.com/maps/dir/?api=1&destination=Koenenkade%208%2C%201081%20KH%20Amsterdam"
-   target="_blank"
-   rel="noopener noreferrer"
-   aria-label="Open de route naar Share Performance bij Spa Zuiver in Google Maps"
-   style="display:block;position:relative;cursor:pointer;">
-    <video
-      id="zuiver-earth-video"
-      muted
-      playsinline
-      preload="metadata"
-    >
-      <source src="locatie%20Shareperformance.mp4" type="video/mp4">
-    </video>
-
-    <div class="earth-location-label">
-      <span class="earth-location-dot"></span>
+<div class="earth-showcase-heading">
+<span class="earth-label" data-i18n="39">ONTDEK ONZE TRAININGSLOCATIE</span>
+<h3 data-i18n="40">Train op een bijzondere locatie</h3>
+<p data-i18n="41">Bij Spa Sport Hotel Zuiver, direct aan het Amsterdamse Bos.</p>
+</div>
+<div class="earth-video-frame">
+<a aria-label="Open de route naar Share Performance bij Spa Zuiver in Google Maps" href="https://www.google.com/maps/dir/?api=1&amp;destination=Koenenkade%208%2C%201081%20KH%20Amsterdam" rel="noopener noreferrer" style="display:block;position:relative;cursor:pointer;" target="_blank">
+<video id="zuiver-earth-video" muted="" playsinline="" preload="metadata">
+<source src="locatie%20Shareperformance.mp4" type="video/mp4"/>
+</video>
+<div class="earth-location-label">
+<span class="earth-location-dot"></span>
       AMSTERDAMSE BOS · SPA ZUIVER
     </div>
-  </a>
- </div>
+</a>
 </div>
-
+</div>
 <section class="alt" id="tarieven">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow">Investeer in jezelf</div>
-      <h2>Jouw doelen. Jouw traject.</h2>
-      <p>Iedere persoon is anders. Daarom kijken we samen naar jouw doelen en welk trainingstraject het beste bij je past.</p>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Personal Training</h3>
-        <p>Persoonlijke begeleiding op maat om af te vallen, spiermassa op te bouwen of sterker te worden.</p>
-        <a class="btn" href="#contact">Plan een kennismaking</a>
-      </div>
-
-      <div class="card">
-        <h3>Duo Personal Training</h3>
-        <p>Samen trainen met persoonlijke begeleiding en een programma dat aansluit bij jullie doelen.</p>
-        <a class="btn" href="#contact">Neem contact op</a>
-      </div>
-
-      <div class="card">
-        <h3>10 Weeks Strong</h3>
-        <p><strong>€ 29 per training</strong></p>
-        <p>10 weken trainen, 2 keer per week. In totaal 20 trainingen voor € 580.</p>
-        <p>Afwisselende groepslessen, voedingsbegeleiding en werken aan jouw resultaat.</p>
-        <a class="btn" href="#contact">Meld je aan</a>
-      </div>
-    </div>
-  </div>
+<div class="wrap">
+<div class="section-head">
+<div class="eyebrow" data-i18n="42">Investeer in jezelf</div>
+<h2 data-i18n="43">Jouw doelen. Jouw traject.</h2>
+<p data-i18n="44">Iedere persoon is anders. Daarom kijken we samen naar jouw doelen en welk trainingstraject het beste bij je past.</p>
+</div>
+<div class="cards">
+<div class="card">
+<h3>Personal Training</h3>
+<p data-i18n="45">Persoonlijke begeleiding op maat om af te vallen, spiermassa op te bouwen of sterker te worden.</p>
+<a class="btn" data-i18n="46" href="#contact">Plan een kennismaking</a>
+</div>
+<div class="card">
+<h3>Duo Personal Training</h3>
+<p data-i18n="47">Samen trainen met persoonlijke begeleiding en een programma dat aansluit bij jullie doelen.</p>
+<a class="btn" data-i18n="48" href="#contact">Neem contact op</a>
+</div>
+<div class="card">
+<h3>10 Weeks Strong</h3>
+<p data-i18n="49"><strong data-i18n="50">€ 29 per training</strong></p>
+<p data-i18n="51">10 weken trainen, 2 keer per week. In totaal 20 trainingen voor € 580.</p>
+<p data-i18n="52">Afwisselende groepslessen, voedingsbegeleiding en werken aan jouw resultaat.</p>
+<a class="btn" data-i18n="53" href="#contact">Meld je aan</a>
+</div>
+</div>
+</div>
 </section>
-
-<section class="contact" id="contact"><div class="wrap"><div class="eyebrow">Begin vandaag</div><h2>Klaar om aan jouw doelen te werken?</h2><p>Vraag vrijblijvend een kennismaking aan of geef aan in welke training je geïnteresseerd bent. Je ontvangt daarna persoonlijk bericht om een geschikt moment af te spreken.</p><div class="form-layout"><div><h3>Persoonlijke begeleiding begint hier</h3><p>Vertel waar je aan wilt werken. Of je nu wilt afvallen, sterker wilt worden of wilt deelnemen aan 10 Weeks Strong: we kijken samen wat past.</p><div class="panel" style="padding:25px"><strong style="color:var(--gold)">Goed om te weten</strong><p>Dit is een aanvraag, geen directe bevestiging van een training. Voor het trainen bij Zuiver is een apart lidmaatschap vereist.</p></div></div><form name="kennismaking" method="POST" action="/bedankt.html" data-netlify="true" netlify-honeypot="bot-field" class="lead-form"><input type="hidden" name="form-name" value="kennismaking"><p class="hidden-field"><label>Laat dit veld leeg <input name="bot-field" autocomplete="off"></label></p><label for="naam">Naam *</label><input id="naam" name="naam" type="text" autocomplete="name" required maxlength="120"><label for="email">E-mailadres *</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200"><label for="telefoon">Telefoonnummer *</label><input id="telefoon" name="telefoon" type="tel" autocomplete="tel" maxlength="40" required><label for="interesse">Waar heb je interesse in? *</label><select id="interesse" name="interesse" required><option value="">Maak een keuze</option><option>Gratis kennismaking</option><option>Losse personal training</option><option>5-rittenkaart personal training</option><option>10-rittenkaart personal training</option><option>10 Weeks Strong</option></select><label for="doel">Wat is jouw trainingsdoel?</label><textarea id="doel" name="trainingsdoel" rows="4" maxlength="1200" placeholder="Bijvoorbeeld: sterker worden, afvallen of fitter worden"></textarea><label class="consent"><input type="checkbox" name="privacy-akkoord" value="ja" required><span>Ik geef toestemming om mijn gegevens te gebruiken om op mijn aanvraag te reageren. *</span></label><button type="submit" class="btn primary submit-btn">Verstuur mijn aanvraag →</button><p class="note">Je gegevens worden uitsluitend gebruikt om je aanvraag te behandelen. Deel geen medische of andere gevoelige informatie via dit formulier.</p></form></div></div></section>
-</main><footer><div class="wrap footer-inner"><span>© <span id="year"></span> Share Performance</span><span>Personal Training · Amsterdam & Amstelveen</span></div></footer>
+<section class="contact" id="contact"><div class="wrap"><div class="eyebrow" data-i18n="54">Begin vandaag</div><h2 data-i18n="55">Klaar om aan jouw doelen te werken?</h2><p data-i18n="56">Vraag vrijblijvend een kennismaking aan of geef aan in welke training je geïnteresseerd bent. Je ontvangt daarna persoonlijk bericht om een geschikt moment af te spreken.</p><div class="form-layout"><div><h3 data-i18n="57">Persoonlijke begeleiding begint hier</h3><p data-i18n="58">Vertel waar je aan wilt werken. Of je nu wilt afvallen, sterker wilt worden of wilt deelnemen aan 10 Weeks Strong: we kijken samen wat past.</p><div class="panel" style="padding:25px"><strong data-i18n="59" style="color:var(--gold)">Goed om te weten</strong><p data-i18n="60">Dit is een aanvraag, geen directe bevestiging van een training. Voor het trainen bij Zuiver is een apart lidmaatschap vereist.</p></div></div><form action="/bedankt.html" class="lead-form" data-netlify="true" method="POST" name="kennismaking" netlify-honeypot="bot-field"><input name="form-name" type="hidden" value="kennismaking"/><p class="hidden-field"><label data-i18n="61">Laat dit veld leeg <input autocomplete="off" name="bot-field"/></label></p><label data-i18n="62" for="naam">Naam *</label><input autocomplete="name" id="naam" maxlength="120" name="naam" required="" type="text"/><label data-i18n="63" for="email">E-mailadres *</label><input autocomplete="email" id="email" maxlength="200" name="email" required="" type="email"/><label data-i18n="64" for="telefoon">Telefoonnummer *</label><input autocomplete="tel" id="telefoon" maxlength="40" name="telefoon" required="" type="tel"/><label data-i18n="65" for="interesse">Waar heb je interesse in? *</label><select id="interesse" name="interesse" required=""><option data-i18n="66" value="">Maak een keuze</option><option data-i18n="67">Gratis kennismaking</option><option data-i18n="68">Losse personal training</option><option data-i18n="69">5-rittenkaart personal training</option><option data-i18n="70">10-rittenkaart personal training</option><option>10 Weeks Strong</option></select><label data-i18n="71" for="doel">Wat is jouw trainingsdoel?</label><textarea data-placeholder-i18n="goal" id="doel" maxlength="1200" name="trainingsdoel" placeholder="Bijvoorbeeld: sterker worden, afvallen of fitter worden" rows="4"></textarea><label class="consent" data-i18n="72"><input name="privacy-akkoord" required="" type="checkbox" value="ja"/><span data-i18n="73">Ik geef toestemming om mijn gegevens te gebruiken om op mijn aanvraag te reageren. *</span></label><button class="btn primary submit-btn" data-i18n="74" type="submit">Verstuur mijn aanvraag →</button><p class="note" data-i18n="75">Je gegevens worden uitsluitend gebruikt om je aanvraag te behandelen. Deel geen medische of andere gevoelige informatie via dit formulier.</p></form></div></div></section>
+</main><footer><div class="wrap footer-inner"><span>© <span id="year"></span> Share Performance</span><span>Personal Training · Amsterdam &amp; Amstelveen</span></div></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-
 <style>
 /* Scroll-animaties */
 .reveal {
@@ -298,7 +283,6 @@ a.btn:hover, button:hover, .btn:hover {
   }
 }
 </style>
-
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(
@@ -329,8 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   elements.forEach(el => observer.observe(el));
 });
-</script></script>
-
+</script>
 <script>
   const earthVideo = document.getElementById('zuiver-earth-video');
 
@@ -349,7 +332,6 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(earthVideo);
   }
 </script>
-
 <style>
   .sp-wa-button {
     position: fixed;
@@ -426,32 +408,16 @@ document.addEventListener("DOMContentLoaded", function () {
     .sp-wa-button { animation: none; transition: none; }
   }
 </style>
-
-<div class="sp-wa-chat" id="sp-wa-chat" hidden>
-  <h3>Chat met Share Performance</h3>
-  <p>Hoi! 👋 Heb je vragen over personal training of 10 Weeks Strong? Stuur me gerust een berichtje!</p>
-  <a class="sp-wa-link"
-     href="https://wa.me/31630717503?text=Hoi%21%20Ik%20heb%20je%20website%20bekeken%20en%20wil%20graag%20meer%20informatie."
-     target="_blank"
-     rel="noopener noreferrer">
+<div class="sp-wa-chat" hidden="" id="sp-wa-chat">
+<h3 data-i18n="76">Chat met Share Performance</h3>
+<p data-i18n="77">Hoi! 👋 Heb je vragen over personal training of 10 Weeks Strong? Stuur me gerust een berichtje!</p>
+<a class="sp-wa-link" data-i18n="78" href="https://wa.me/31630717503?text=Hoi%21%20Ik%20heb%20je%20website%20bekeken%20en%20wil%20graag%20meer%20informatie." rel="noopener noreferrer" target="_blank">
     Start WhatsApp-chat →
   </a>
 </div>
-
-<button class="sp-wa-button" id="sp-wa-button"
-        type="button" aria-label="Open WhatsApp-chat"
-        aria-expanded="false" aria-controls="sp-wa-chat">
-  
-<img
-  src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/whatsapp.svg"
-  alt=""
-  width="33"
-  height="33"
-  style="filter:brightness(0) invert(1);display:block;"
->
-
+<button aria-controls="sp-wa-chat" aria-expanded="false" aria-label="Open WhatsApp-chat" class="sp-wa-button" id="sp-wa-button" type="button">
+<img alt="" height="33" src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/whatsapp.svg" style="filter:brightness(0) invert(1);display:block;" width="33"/>
 </button>
-
 <script>
   const spWaButton = document.getElementById('sp-wa-button');
   const spWaChat = document.getElementById('sp-wa-chat');
@@ -461,7 +427,41 @@ document.addEventListener("DOMContentLoaded", function () {
     spWaButton.setAttribute('aria-expanded', String(!spWaChat.hidden));
   });
 </script>
-
-</body>
+<script>
+(function(){
+ const copy = {"0": {"nl": "Diensten", "en": "Services"}, "1": {"nl": "Locatie", "en": "Location"}, "2": {"nl": "Tarieven", "en": "Pricing"}, "3": {"nl": "Wil je afvallen, spiermassa opbouwen of sterker worden? Met persoonlijke coaching en een plan dat bij jou past, werken we doelgericht aan jouw resultaat.", "en": "Looking to lose weight, build muscle or get stronger? With personal coaching and a plan tailored to you, we work towards your goals."}, "4": {"nl": "Plan een kennismaking →", "en": "Book an introduction →"}, "5": {"nl": "Ontdek de trainingen", "en": "Explore training options"}, "6": {"nl": "Wat ik aanbied", "en": "What I offer"}, "7": {"nl": "Training die bij jouw doelen past", "en": "Training tailored to your goals"}, "8": {"nl": "Geen standaard aanpak, maar begeleiding op jouw niveau en afgestemd op jouw wensen.", "en": "No one-size-fits-all approach: coaching adapted to your level and goals."}, "9": {"nl": "Afvallen &amp; fitter worden", "en": "Lose weight & get fitter"}, "10": {"nl": "Werk aan een fitter en energieker lichaam met een haalbare aanpak voor training en leefstijl.", "en": "Build a fitter, more energetic body with a realistic approach to training and lifestyle."}, "11": {"nl": "Spiermassa &amp; kracht", "en": "Muscle & strength"}, "12": {"nl": "Bouw sterker op met gerichte krachttraining, techniek en een duidelijk trainingsplan.", "en": "Build strength through focused resistance training, proper technique and a clear training plan."}, "13": {"nl": "Persoonlijke aandacht, coaching en trainingen die passen bij jouw niveau en agenda.", "en": "Personal attention, coaching and sessions that suit your fitness level and schedule."}, "14": {"nl": "Train samen, word sterker", "en": "Train together, get stronger"}, "15": {"nl": "Tien weken samen werken aan kracht, conditie en een gezonde leefstijl. Met twee begeleide trainingen per week, afwisselende trainingsvormen en aandacht voor voeding en progressie.", "en": "Ten weeks of building strength, fitness and healthy habits together. Two coached sessions per week, varied workouts and support with nutrition and progress."}, "16": {"nl": "Vraag naar de volgende ronde →", "en": "Ask about the next group →"}, "17": {"nl": "Het programma", "en": "The programme"}, "18": {"nl": "10 weken. 20 trainingen.", "en": "10 weeks. 20 sessions."}, "19": {"nl": "Startdata op aanvraag.", "en": "Start dates available on request."}, "20": {"nl": "Jouw coach", "en": "Your coach"}, "21": {"nl": "Over Share Performance", "en": "About Share Performance"}, "22": {"nl": "Maak kennis met Sherif", "en": "Meet Sherif"}, "23": {"nl": "Ik ben Sherif, personal trainer bij Share Performance. Met persoonlijke begeleiding, aandacht voor techniek en een aanpak die past bij jouw niveau help ik je sterker, fitter en zelfverzekerder te worden.", "en": "I’m Sherif, personal trainer at Share Performance. Through personal coaching, attention to technique and training tailored to your level, I help you become stronger, fitter and more confident."}, "24": {"nl": "De trainingen vinden plaats bij de fitnessfaciliteiten van Hotel &amp; Wellness Zuiver, bij het Amsterdamse Bos.", "en": "Training takes place at the fitness facilities of Hotel & Wellness Zuiver, near the Amsterdamse Bos."}, "25": {"nl": "Training bij Zuiver, nabij het Amsterdamse Bos. Een apart lidmaatschap van Zuiver is vereist.", "en": "Training at Zuiver, near the Amsterdamse Bos. A separate Zuiver membership is required."}, "26": {"nl": "Een bijzondere trainingsomgeving", "en": "An exceptional training environment"}, "27": {"nl": "Train bij Spa Sport Hotel Zuiver", "en": "Train at Spa Sport Hotel Zuiver"}, "28": {"nl": "Bij Share Performance train je in de luxe omgeving van Spa Sport Hotel Zuiver, vlak bij het Amsterdamse Bos. Fitness Zuiver biedt uitgebreide mogelijkheden voor krachttraining, cardio en groepslessen. Het hotel- en wellnesscomplex biedt daarnaast volop ruimte om te ontspannen en te herstellen.", "en": "At Share Performance, you train in the premium setting of Spa Sport Hotel Zuiver, near the Amsterdamse Bos. Fitness Zuiver offers extensive strength, cardio and group-training facilities. The hotel and wellness complex also offers space to relax and recover."}, "29": {"nl": "Fitness &amp; groepslessen", "en": "Fitness & group classes"}, "30": {"nl": "Ruimte om gericht aan je doelen te werken", "en": "Space to focus on your goals"}, "31": {"nl": "Hotel-, spa- &amp; wellnesscomplex", "en": "Hotel, spa & wellness complex"}, "32": {"nl": "Training en ontspanning op één locatie", "en": "Training and relaxation in one location"}, "33": {"nl": "De fitnessruimte", "en": "The gym"}, "34": {"nl": "De locatie", "en": "The location"}, "35": {"nl": "Wellness &amp; ontspanning", "en": "Wellness & relaxation"}, "36": {"nl": "Een luxe omgeving", "en": "A premium setting"}, "37": {"nl": "Voor personal training is een apart lidmaatschap bij Zuiver nodig. Toegang tot de wellness is afhankelijk van het gekozen lidmaatschap of de geldende toegangsvoorwaarden. Share Performance biedt de trainingen aan; de wellnessfaciliteiten behoren tot Zuiver.", "en": "A separate Zuiver membership is required for personal training. Wellness access depends on your membership or applicable entry conditions. Share Performance provides the training sessions; the wellness facilities are operated by Zuiver."}, "38": {"nl": "Vraag een kennismaking aan →", "en": "Request an introduction →"}, "39": {"nl": "ONTDEK ONZE TRAININGSLOCATIE", "en": "DISCOVER OUR TRAINING LOCATION"}, "40": {"nl": "Train op een bijzondere locatie", "en": "Train somewhere special"}, "41": {"nl": "Bij Spa Sport Hotel Zuiver, direct aan het Amsterdamse Bos.", "en": "At Spa Sport Hotel Zuiver, right next to the Amsterdamse Bos."}, "42": {"nl": "Investeer in jezelf", "en": "Invest in yourself"}, "43": {"nl": "Jouw doelen. Jouw traject.", "en": "Your goals. Your journey."}, "44": {"nl": "Iedere persoon is anders. Daarom kijken we samen naar jouw doelen en welk trainingstraject het beste bij je past.", "en": "Everyone is different. That’s why we discuss your goals and find the training programme that suits you best."}, "45": {"nl": "Persoonlijke begeleiding op maat om af te vallen, spiermassa op te bouwen of sterker te worden.", "en": "Tailored personal coaching to lose weight, build muscle or get stronger."}, "46": {"nl": "Plan een kennismaking", "en": "Book an introduction"}, "47": {"nl": "Samen trainen met persoonlijke begeleiding en een programma dat aansluit bij jullie doelen.", "en": "Train together with personal coaching and a programme suited to both your goals."}, "48": {"nl": "Neem contact op", "en": "Get in touch"}, "49": {"nl": "<strong>€ 29 per training</strong>", "en": "€29 per session"}, "50": {"nl": "€ 29 per training", "en": "€29 per session"}, "51": {"nl": "10 weken trainen, 2 keer per week. In totaal 20 trainingen voor € 580.", "en": "Train twice a week for 10 weeks. 20 sessions in total for €580."}, "52": {"nl": "Afwisselende groepslessen, voedingsbegeleiding en werken aan jouw resultaat.", "en": "Varied group sessions, nutrition coaching and a focus on your progress."}, "53": {"nl": "Meld je aan", "en": "Sign up"}, "54": {"nl": "Begin vandaag", "en": "Start today"}, "55": {"nl": "Klaar om aan jouw doelen te werken?", "en": "Ready to work towards your goals?"}, "56": {"nl": "Vraag vrijblijvend een kennismaking aan of geef aan in welke training je geïnteresseerd bent. Je ontvangt daarna persoonlijk bericht om een geschikt moment af te spreken.", "en": "Request a no-obligation introduction or tell us which training option interests you. You’ll receive a personal reply to arrange a suitable time."}, "57": {"nl": "Persoonlijke begeleiding begint hier", "en": "Your personal coaching starts here"}, "58": {"nl": "Vertel waar je aan wilt werken. Of je nu wilt afvallen, sterker wilt worden of wilt deelnemen aan 10 Weeks Strong: we kijken samen wat past.", "en": "Tell us what you want to achieve. Whether you want to lose weight, get stronger or join 10 Weeks Strong, we’ll find the right approach together."}, "59": {"nl": "Goed om te weten", "en": "Good to know"}, "60": {"nl": "Dit is een aanvraag, geen directe bevestiging van een training. Voor het trainen bij Zuiver is een apart lidmaatschap vereist.", "en": "This is an enquiry, not a confirmed training booking. A separate Zuiver membership is required to train here."}, "61": {"nl": "Laat dit veld leeg <input autocomplete=\"off\" name=\"bot-field\"/>", "en": "Leave this field blank"}, "62": {"nl": "Naam *", "en": "Name *"}, "63": {"nl": "E-mailadres *", "en": "Email address *"}, "64": {"nl": "Telefoonnummer *", "en": "Phone number *"}, "65": {"nl": "Waar heb je interesse in? *", "en": "What are you interested in? *"}, "66": {"nl": "Maak een keuze", "en": "Choose an option"}, "67": {"nl": "Gratis kennismaking", "en": "Free introduction"}, "68": {"nl": "Losse personal training", "en": "Single personal training session"}, "69": {"nl": "5-rittenkaart personal training", "en": "5-session personal training package"}, "70": {"nl": "10-rittenkaart personal training", "en": "10-session personal training package"}, "71": {"nl": "Wat is jouw trainingsdoel?", "en": "What is your training goal?"}, "72": {"nl": "<input name=\"privacy-akkoord\" required=\"\" type=\"checkbox\" value=\"ja\"/><span>Ik geef toestemming om mijn gegevens te gebruiken om op mijn aanvraag te reageren. *</span>", "en": "I consent to my details being used to respond to my enquiry. *"}, "73": {"nl": "Ik geef toestemming om mijn gegevens te gebruiken om op mijn aanvraag te reageren. *", "en": "I consent to my details being used to respond to my enquiry. *"}, "74": {"nl": "Verstuur mijn aanvraag →", "en": "Send my enquiry →"}, "75": {"nl": "Je gegevens worden uitsluitend gebruikt om je aanvraag te behandelen. Deel geen medische of andere gevoelige informatie via dit formulier.", "en": "Your details will only be used to handle your enquiry. Please do not share medical or other sensitive information through this form."}, "76": {"nl": "Chat met Share Performance", "en": "Chat with Share Performance"}, "77": {"nl": "Hoi! 👋 Heb je vragen over personal training of 10 Weeks Strong? Stuur me gerust een berichtje!", "en": "Hi! 👋 Have questions about personal training or 10 Weeks Strong? Feel free to send me a message!"}, "78": {"nl": "\n    Start WhatsApp-chat →\n  ", "en": "Start WhatsApp chat →"}, "79": {"nl": "✔ 2 trainingen per week<br/>✔ Kracht, conditie en boksen<br/>✔ Voedingsbegeleiding en metingen", "en": "✔ 2 sessions per week<br/>✔ Strength, conditioning and boxing<br/>✔ Nutrition coaching and progress measurements"}};
+ const descriptions = {
+  nl:'Personal training bij Share Performance in Amsterdam en Amstelveen. Werk aan kracht, spiermassa en fitheid met persoonlijke begeleiding. Plan een kennismaking.',
+  en:'Personal training at Share Performance in Amsterdam and Amstelveen. Build strength, muscle and fitness with tailored coaching. Book an introduction.'
+ };
+ function setLanguage(language){
+  const lang = language === 'en' ? 'en' : 'nl';
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+   const translation=copy[el.dataset.i18n];
+   if(translation) el.innerHTML=translation[lang];
+  });
+  document.querySelectorAll('[data-language]').forEach(function(btn){
+   btn.setAttribute('aria-pressed',String(btn.dataset.language===lang));
+  });
+  const goal=document.querySelector('[data-placeholder-i18n="goal"]');
+  if(goal) goal.placeholder=lang==='en'?'For example: get stronger, lose weight or improve fitness':'Bijvoorbeeld: sterker worden, afvallen of fitter worden';
+  document.querySelectorAll('img[data-alt-en]').forEach(function(img){
+   if(!img.dataset.altNl) img.dataset.altNl=img.alt;
+   img.alt=lang==='en'?img.dataset.altEn:img.dataset.altNl;
+  });
+  document.querySelector('meta[name="description"]').content=descriptions[lang];
+  document.title=lang==='en'?'Personal Trainer Amsterdam & Amstelveen | Share Performance':'Personal Trainer Amsterdam & Amstelveen | Share Performance';
+  const wa=document.querySelector('#sp-wa-chat .sp-wa-link');
+  if(wa) wa.href=lang==='en'?'https://wa.me/31630717503?text=Hi%21%20I%20visited%20your%20website%20and%20would%20like%20more%20information.':'https://wa.me/31630717503?text=Hoi%21%20Ik%20heb%20je%20website%20bekeken%20en%20wil%20graag%20meer%20informatie.';
+  try{localStorage.setItem('shareperformance-language',lang)}catch(e){}
+ }
+ document.querySelectorAll('[data-language]').forEach(function(btn){
+  btn.addEventListener('click',function(){setLanguage(btn.dataset.language)});
+ });
+ let saved='nl';
+ try{saved=localStorage.getItem('shareperformance-language')||'nl'}catch(e){}
+ setLanguage(saved);
+})();
+</script></body>
 </html>
-

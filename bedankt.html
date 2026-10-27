@@ -1,1 +1,65 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bedankt | Share Performance</title><style>body{background:#101010;color:#f6f3ed;font:18px Arial,sans-serif;margin:0;min-height:100vh;display:grid;place-items:center}main{max-width:550px;padding:35px;text-align:center}h1{color:#c8a66a;font-size:clamp(2rem,6vw,3rem)}p{color:#bbb;line-height:1.6}a{display:inline-block;background:#c8a66a;color:#111;padding:14px 24px;text-decoration:none;font-weight:bold;margin-top:20px}</style></head><body><main><h1>Bedankt voor je aanvraag!</h1><p>Je bericht is ontvangen. Ik neem persoonlijk contact met je op om de mogelijkheden te bespreken.</p><a href="/">Terug naar Share Performance</a></main></body></html>
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bedankt | Share Performance</title>
+  <meta name="robots" content="noindex,follow">
+  <style>
+    :root{--gold:#c8a66a;--bg:#101010;--white:#f6f3ed;--muted:#bbb}
+    *{box-sizing:border-box}
+    body{background:var(--bg);color:var(--white);font:18px Arial,sans-serif;margin:0;min-height:100vh;display:flex;flex-direction:column}
+    header{padding:22px min(5vw,50px);display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:1px solid #333}
+    .brand{color:var(--white);text-decoration:none;font-weight:900;letter-spacing:.1em;font-size:clamp(.9rem,2vw,1.2rem)}
+    .brand span{color:var(--gold)}
+    .language-switch{display:flex;gap:5px;align-items:center;padding:4px;border:1px solid #5c4b2e;border-radius:8px}
+    .language-button{background:transparent;color:var(--white);border:0;border-radius:5px;padding:8px 10px;font:700 14px Arial,sans-serif;cursor:pointer}
+    .language-button[aria-pressed="true"]{background:var(--gold);color:#101010}
+    .language-button:focus-visible,a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+    main{width:min(100%,650px);padding:55px 28px;margin:auto;text-align:center}
+    .check{display:grid;place-items:center;width:68px;height:68px;margin:0 auto 25px;border:1px solid var(--gold);border-radius:50%;font-size:34px;color:var(--gold)}
+    h1{color:var(--gold);font-size:clamp(2rem,6vw,3rem);line-height:1.15}
+    p{color:var(--muted);line-height:1.7}
+    .back{display:inline-block;background:var(--gold);color:#111;padding:14px 24px;text-decoration:none;font-weight:bold;margin-top:20px;border-radius:3px}
+    .back:hover{filter:brightness(1.12)}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">SHARE <span>PERFORMANCE</span></a>
+    <div class="language-switch" role="group" aria-label="Website language / Websitetaal">
+      <button class="language-button" type="button" data-language="nl" aria-pressed="true" lang="nl">🇳🇱 NL</button>
+      <button class="language-button" type="button" data-language="en" aria-pressed="false" lang="en">🇬🇧 EN</button>
+    </div>
+  </header>
+  <main>
+    <div class="check" aria-hidden="true">✓</div>
+    <h1 id="thanks-heading">Bedankt voor je aanvraag!</h1>
+    <p id="thanks-message">Je bericht is ontvangen. Ik neem persoonlijk contact met je op om de mogelijkheden te bespreken.</p>
+    <a class="back" href="/" id="back-link">Terug naar Share Performance →</a>
+  </main>
+  <script>
+    (function(){
+      const copy={
+        nl:{title:'Bedankt | Share Performance',heading:'Bedankt voor je aanvraag!',message:'Je bericht is ontvangen. Ik neem persoonlijk contact met je op om de mogelijkheden te bespreken.',back:'Terug naar Share Performance →'},
+        en:{title:'Thank You | Share Performance',heading:'Thank you for your enquiry!',message:'Your message has been received. I will personally get in touch with you to discuss the options.',back:'Back to Share Performance →'}
+      };
+      function setLanguage(value){
+        const lang=value==='en'?'en':'nl';
+        const t=copy[lang];
+        document.documentElement.lang=lang;
+        document.title=t.title;
+        document.getElementById('thanks-heading').textContent=t.heading;
+        document.getElementById('thanks-message').textContent=t.message;
+        document.getElementById('back-link').textContent=t.back;
+        document.querySelectorAll('[data-language]').forEach(function(button){button.setAttribute('aria-pressed',String(button.dataset.language===lang));});
+        try{localStorage.setItem('shareperformance-language',lang)}catch(e){}
+      }
+      document.querySelectorAll('[data-language]').forEach(function(button){button.addEventListener('click',function(){setLanguage(button.dataset.language);});});
+      let saved='nl';
+      try{saved=localStorage.getItem('shareperformance-language')||'nl'}catch(e){}
+      setLanguage(saved);
+    })();
+  </script>
+</body>
+</html>

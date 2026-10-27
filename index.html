@@ -160,6 +160,9 @@ border-bottom:1px solid transparent;padding-bottom:4px}
 .review-note{color:#999;font-size:12px;margin-top:18px}
 @media(max-width:850px){.reviews-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.reviews-grid{grid-template-columns:1fr}#ervaringen{padding:48px 0}}
+</style><style>
+#analytics-consent{position:fixed;bottom:16px;left:16px;right:16px;max-width:540px;z-index:99999;background:#171717;color:#eee;border:1px solid #b89a5d;border-radius:12px;padding:18px;box-shadow:0 8px 35px #0009;font:14px/1.5 Arial,sans-serif}
+#analytics-consent p{margin:0 0 12px}#analytics-consent .consent-actions{display:flex;gap:10px;flex-wrap:wrap}#analytics-consent button{border:1px solid #c8a66a;padding:9px 15px;border-radius:6px;cursor:pointer;background:#c8a66a;color:#111;font-weight:700}#analytics-consent button.reject{background:transparent;color:#eee}
 </style></head>
 <style>
 /* Mooie indeling tarieven */
@@ -511,6 +514,44 @@ document.addEventListener("DOMContentLoaded", function () {
  let saved='nl';
  try{saved=localStorage.getItem('shareperformance-language')||'nl'}catch(e){}
  setLanguage(saved);
+})();
+</script><div aria-label="Website statistieken" hidden="" id="analytics-consent" role="dialog"><p><strong>Website-statistieken</strong><br/>Mag Share Performance anonieme bezoekstatistieken en klikken op WhatsApp meten met Google Analytics? Je kunt ook weigeren.</p><div class="consent-actions"><button id="analytics-accept" type="button">Accepteren</button><button class="reject" id="analytics-reject" type="button">Weigeren</button></div></div><script>
+(function(){
+  const measurementId='G-B56WJCRE4Q';
+  const banner=document.getElementById('analytics-consent');
+  let consent=null;
+  try{consent=localStorage.getItem('sp_analytics_consent')}catch(e){}
+  function loadAnalytics(){
+    if(window.spAnalyticsLoaded)return;
+    window.spAnalyticsLoaded=true;
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){window.dataLayer.push(arguments)};
+    window.gtag('js',new Date());
+    window.gtag('config',measurementId);
+    const script=document.createElement('script');script.async=true;
+    script.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(measurementId);
+    document.head.appendChild(script);
+  }
+  function saveConsent(value){
+    try{localStorage.setItem('sp_analytics_consent',value)}catch(e){}
+    banner.hidden=true;
+    if(value==='yes')loadAnalytics();
+  }
+  document.getElementById('analytics-accept').addEventListener('click',function(){saveConsent('yes')});
+  document.getElementById('analytics-reject').addEventListener('click',function(){saveConsent('no')});
+  if(consent==='yes')loadAnalytics();
+  else if(consent!=='no')banner.hidden=false;
+  document.addEventListener('click',function(e){
+    const target=e.target.closest('a,button');
+    if(!target || !window.spAnalyticsLoaded || !window.gtag)return;
+    if(target.id==='sp-wa-button')window.gtag('event','whatsapp_widget_open');
+    if(target.matches('a[href*="wa.me"],a[href*="api.whatsapp.com"]'))window.gtag('event','whatsapp_click',{link_url:target.href});
+    if(target.matches('a[href*="instagram.com/"]'))window.gtag('event','instagram_click',{link_url:target.href});
+  });
+  const form=document.querySelector('form[data-netlify],form[netlify]');
+  if(form)form.addEventListener('submit',function(){
+    if(window.spAnalyticsLoaded && window.gtag)window.gtag('event','contact_form_submit');
+  });
 })();
 </script></body>
 </html>

@@ -167,9 +167,9 @@ border-bottom:1px solid transparent;padding-bottom:4px}
 </style><style>
 /* Reviews: horizontale slider met automatische doorgang */
 #ervaringen .reviews-carousel{position:relative}
-#ervaringen .reviews-grid{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-inline:contain;padding:5px 2px 18px}
+#ervaringen .reviews-grid{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:none;scroll-behavior:auto;scrollbar-width:none;overscroll-behavior-inline:contain;padding:5px 2px 18px}
 #ervaringen .reviews-grid::-webkit-scrollbar{display:none}
-#ervaringen .review-card{flex:0 0 calc((100% - 36px)/3);scroll-snap-align:start;min-width:0}
+#ervaringen .review-card{flex:0 0 calc((100% - 36px)/3);scroll-snap-align:none;min-width:0}
 #ervaringen .reviews-controls{display:flex;justify-content:flex-end;gap:12px;margin-top:8px}
 #ervaringen .review-arrow{width:46px;height:46px;border:1px solid #c8a66a;background:#1b1b1b;color:#c8a66a;border-radius:50%;font-size:24px;cursor:pointer;display:grid;place-items:center;line-height:1}
 #ervaringen .review-arrow:hover,#ervaringen .review-arrow:focus-visible{background:#c8a66a;color:#111}
@@ -580,38 +580,55 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 })();
 </script><script>
+/* Doorlopend, rustig bewegende reviews zonder wachttijd */
 (function(){
   const track=document.getElementById('reviews-track');
   const previous=document.getElementById('reviews-prev');
   const next=document.getElementById('reviews-next');
   if(!track||!previous||!next)return;
   const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
-  let timer;
-  const cards=Array.from(track.querySelectorAll('.review-card'));
-  function advance(direction){
-    if(!cards.length)return;
-    const left=track.scrollLeft;
-    const positions=cards.map(card=>card.offsetLeft-cards[0].offsetLeft);
-    const tolerance=8;
-    let index;
-    if(direction>0){index=positions.findIndex(pos=>pos>left+tolerance);if(index<0)index=0;}
-    else {index=positions.length-1;for(let i=positions.length-1;i>=0;i--){if(positions[i]<left-tolerance){index=i;break;}}}
-    track.scrollTo({left:positions[index],behavior:reducedMotion.matches?'instant':'smooth'});
+  const originals=Array.from(track.querySelectorAll('.review-card'));
+  if(!originals.length)return;
+  originals.forEach(card=>{
+    const clone=card.cloneNode(true);
+    clone.setAttribute('aria-hidden','true');
+    clone.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));
+    clone.querySelectorAll('[tabindex]').forEach(el=>el.setAttribute('tabindex','-1'));
+    track.appendChild(clone);
+  });
+  let paused=false, lastTime=null, frame=null;
+  // Afstand tot de eerste kopie, inclusief de ruimte tussen kaarten.
+  function loopWidth(){return track.children[originals.length].offsetLeft-originals[0].offsetLeft;}
+  function wrap(){const width=loopWidth();if(width>0 && track.scrollLeft>=width)track.scrollLeft-=width;}
+  function animate(time){
+    if(lastTime!==null && !paused && !document.hidden && !reducedMotion.matches){
+      const dt=Math.min(time-lastTime,80);
+      track.scrollLeft+=dt*0.032; // circa 32 pixels per seconde
+      wrap();
+    }
+    lastTime=time;
+    frame=requestAnimationFrame(animate);
   }
-  function stop(){window.clearInterval(timer);timer=undefined;}
-  function start(){stop();if(!reducedMotion.matches&&!document.hidden)timer=window.setInterval(()=>advance(1),4500);}
-  previous.addEventListener('click',()=>{advance(-1);start();});
-  next.addEventListener('click',()=>{advance(1);start();});
+  function step(direction){
+    const width=loopWidth();if(!width)return;
+    const cardWidth=originals[0].getBoundingClientRect().width+18;
+    let target=track.scrollLeft+direction*cardWidth;
+    target=((target%width)+width)%width;
+    track.scrollLeft=target;
+    lastTime=null;
+  }
+  previous.addEventListener('click',()=>step(-1));
+  next.addEventListener('click',()=>step(1));
   const carousel=track.closest('.reviews-carousel');
-  carousel.addEventListener('mouseenter',stop);
-  carousel.addEventListener('mouseleave',start);
-  carousel.addEventListener('focusin',stop);
-  carousel.addEventListener('focusout',e=>{if(!carousel.contains(e.relatedTarget))start();});
-  carousel.addEventListener('touchstart',stop,{passive:true});
-  carousel.addEventListener('touchend',start,{passive:true});
-  document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
-  reducedMotion.addEventListener('change',start);
-  start();
+  carousel.addEventListener('mouseenter',()=>{paused=true;});
+  carousel.addEventListener('mouseleave',()=>{paused=false;lastTime=null;});
+  carousel.addEventListener('focusin',()=>{paused=true;});
+  carousel.addEventListener('focusout',e=>{if(!carousel.contains(e.relatedTarget)){paused=false;lastTime=null;}});
+  carousel.addEventListener('touchstart',()=>{paused=true;},{passive:true});
+  carousel.addEventListener('touchend',()=>{paused=false;lastTime=null;},{passive:true});
+  document.addEventListener('visibilitychange',()=>{lastTime=null;});
+  reducedMotion.addEventListener('change',()=>{lastTime=null;});
+  frame=requestAnimationFrame(animate);
 })();
 </script>
 </body>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://shareperformance.nl/</loc>
-  </url>
+  <url><loc>https://shareperformance.nl/</loc></url>
+  <url><loc>https://shareperformance.nl/personal-training/</loc></url>
+  <url><loc>https://shareperformance.nl/duo-personal-training/</loc></url>
+  <url><loc>https://shareperformance.nl/small-group-training/</loc></url>
 </urlset>
